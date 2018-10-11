@@ -1,19 +1,13 @@
 flink:
   parallelism: 2
 
-twitter:
-  consumerKey:
-  consumerSecret:
-  token:
-  tokenSecret:
-
 spring:
   datasource:
     url: jdbc:h2:file:~/test
     username: sa
     password:
     driver-class-name: org.h2.Driver
-  jpa.hibernate.ddl-auto: update
+  jpa.hibernate.ddl-auto: create-drop
   h2.console:
     enabled: true
     path: /h2

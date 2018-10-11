@@ -13,9 +13,23 @@ public class ApplicationProperties {
 
     private final Flink flink = new Flink();
 
+    private final Twitter twitter = new Twitter();
+
     @Getter
     @Setter
     public class Flink {
         private Integer parallelism;
+    }
+
+    @Getter
+    @Setter
+    public class Twitter {
+        private String consumerKey;
+
+        private String consumerSecret;
+
+        private String token;
+
+        private String tokenSecret;
     }
 }
