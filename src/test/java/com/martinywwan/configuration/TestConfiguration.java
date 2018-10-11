@@ -16,7 +16,6 @@ public class TestConfiguration {
     public class TestSource extends RichSourceFunction<String> implements Serializable {
         @Override
         public void run(SourceContext<String> ctx) throws Exception {
-            System.out.println("************* TUNNNINGNGNGN");
             String inputTestData = FileUtils.readFileToString(new File("src/test/resources/exampleTweet.json"));
             ctx.collect(inputTestData);
         }

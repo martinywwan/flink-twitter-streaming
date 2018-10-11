@@ -22,9 +22,7 @@ public class TweetSink extends RichSinkFunction<Tweet> {
 
     @Override
     public void invoke(Tweet tweet, Context context) {
-        System.out.println("******* INVOKED");
-        log.info(String.format("Tweet received [timestamp=%s] [Tweet=%s]", now(), tweet.toString()));
+        log.info(String.format("Persisting Tweet [timestamp=%s] [Tweet=%s]", now(), tweet.toString()));
         tweetRepo.save(tweet);
-        tweetRepo.findAll().forEach(i -> System.out.println("*** ----- " + i.toString()));
     }
 }
